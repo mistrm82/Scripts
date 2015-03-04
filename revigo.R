@@ -2,17 +2,17 @@
 #'
 #' @param GOs character vector of GO Ids, required
 #' @param pvals numeric vector of p-values for each GO Id (same length as GOs), required
-#' @param cutoff revigo threshold allowed values: "0.90" "0.70" "0.50" "0.40", default set at 0.4
+#' @param cutoff revigo simialrity threshold allowed values: "0.90" "0.70" "0.50" "0.40", default set at 0.4
 #' @param organism string describing organism based on the list provided below, default "whole UniProt"
 #' @param isPValue string value of "yes" or "no", defaukt set to yes
 #' @param whatIsBetter string value of "higher" "lower" "absolute" "abs_log", defaults to "higher"
 #' @param measure string value of similarity measure "RESNIK" "LIN" "SIMREL" "JIANG", default "SIMREL"
 #' @export
 #' @examples
-#' runRevigo((GOs =NULL, pvals=NULL, cutoff = 0.4, organism = "whole UniProt", isPValue="yes", whatIsBetter="higher", measure="SIMREL"))
+#' runRevigo((GOs =NULL, pvals=NULL, cutoff = 0.5, organism = "whole UniProt", isPValue="yes", whatIsBetter="higher", measure="SIMREL"))
 
 
-runRevigo <- function(GOs =NULL, pvals=NULL, cutoff = 0.4, organism = "whole UniProt", 
+runRevigo <- function(GOs =NULL, pvals=NULL, cutoff = 0.5, organism = "whole UniProt", 
                       isPValue="yes", whatIsBetter="higher", measure="SIMREL"){
 
 organism.list <- list(
